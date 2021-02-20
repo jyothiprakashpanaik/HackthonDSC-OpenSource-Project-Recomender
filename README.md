@@ -1,4 +1,4 @@
-# DSC Hackslash/
+# DSC Hackslash/ -> "#EduTech"
 ## NLP-OpenSource-Project-Recomender
 
 <!-- PROJECT LOGO -->
