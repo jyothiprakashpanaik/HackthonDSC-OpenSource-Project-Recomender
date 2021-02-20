@@ -20,7 +20,7 @@
     ·
     <a href="https://github.com/jyothiprakashpanaik/HackthonDSC-OpenSource-Project-Recomender/issues">Report Bug</a>
     .
-    <a href="https://github.com/github/covid-19-repo-data">Dataset-github</a>
+    <a href="https://github.com/github/covid-19-repo-data">Dataset Github</a>
   </p>
 </p>
 
