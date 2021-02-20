@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Open Source Recomender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:300,500&amp;display=swap'>
+<link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/open-source--v1.png" type="image/x-icon">  
+
+<link rel="stylesheet" href="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569006288/BBBootstrap/choices.min.css?version=7.0.0">
+<script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569006273/BBBootstrap/choices.min.js?version=7.0.0"></script>
+<link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.mt-100 {
+    margin-top: 100px;
+
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+    background-color: #F1FDFF;
+  line-height: 1.5;
+  color: #000;
+}
+@media (min-width: 32rem) {
+  body {
+    font-size: 102.5%;
+  }
+}
+@media (min-width: 54rem) {
+  body {
+    font-size: 105%;
+  }
+}
+@media (min-width: 65rem) {
+  body {
+    font-size: 107.5%;
+  }
+}
+@media (min-width: 75em) {
+  body {
+    font-size: 110%;
+  }
+}
+@media (min-width: 91rem) {
+  body {
+    font-size: 115%;
+  }
+}
+@media (min-width: 115rem) {
+  body {
+    font-size: 120%;
+  }
+}
+@media (min-width: 130rem) {
+  body {
+    font-size: 125%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+figure {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.movie{
+    height: 70vh;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    margin-right: 5vh;
+    margin-left: 5vh;
+    display: block;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1em;
+    width: auto;
+    box-shadow: 0px 0px 10px -4px grey;
+    text-align: center;
+}
+#movie_name{
+    width: 70%;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid grey;
+}
+#submission_button{
+    width: 25%;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 5px;
+    color: white;
+    background-color:dodgerblue;
+    border-style: none;
+}
+@media screen and (max-width:600px) {
+    .movie{
+        margin-top: 12vh;
+        margin-bottom: 12vh;
+    }
+}
+</style>
+</head>
+
+
+<body>
+	
+    <div class="movie">
+        <h2><u>Open Source Project Recommender</u></h2>
+        <form action="\predict" method="post" id="multiple_select_form">
+
+          <center><div style="width: 50%;">
+            <select name = "lang" required="required" class="col-md-6 row d-flex justify-content-center mt-100 frmcnt"  data-live-search="true" id="lang" placeholder="Programming language (one or many)" multiple>
+
+              <option value="Java">Java</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="Python">Python</option>
+              <option value="HTML">HTML</option>
+              <option value="C++">C++</option>
+              
+              <option value="Ruby">Ruby</option>
+              <option value="TypeScript">TypeScript</option>
+              <option value="Jupyter Notebook">Jupyter Notebook</option>
+              <option value="Swift">Swift</option>
+              <option value="R">R</option>
+              <option value="G-code">G-code</option>
+              <option value="Dart">Dart</option>
+              <option value="PHP">PHP</option>
+              <option value="C#">C#</option>
+              <option value="TeX">TeX</option>
+              <option value="AppleScript">AppleScript</option>
+              <option value="HCL">HCL</option>
+              <option value="Rust">Rust</option>
+              <option value="Reason">Reason</option>
+              <option value="Kotlin">Kotlin</option>
+              <option value="F#">F#</option>
+              <option value="Shell">Shell</option>
+              <option value="Vue">Vue</option>
+              <option value="CSS">CSS</option>
+              <option value="Nextflow">Nextflow</option>
+              <option value="Makefile">Makefile</option>
+              <option value="Dockerfile">Dockerfile</option>
+              <option value="QML">QML</option>
+              <option value="Go">Go</option>
+              <option value="Roff">Roff</option>
+              <option value="Starlark">Starlark</option>
+              <option value="Solidity">Solidity</option>
+              <option value="wdl">wdl</option>
+              <option value="SAS">SAS</option>
+              <option value="C">C</option>
+              <option value="MATLAB">MATLAB</option>
+              <option value="GLSL">GLSL</option>
+              <option value="ShaderLab">ShaderLab</option>
+              <option value="Groovy">Groovy</option>
+              <option value="Mathematica">Mathematica</option>
+              <option value="Julia">Julia</option>
+              <option value="Elixir">Elixir</option>
+              <option value="PowerShell">PowerShell</option>
+              <option value="ObjectScript">ObjectScript</option>
+              <option value="GDScript">GDScript</option>
+              <option value="Common Workflow Language">Common Workflow Language</option>
+              <option value="PostScript">PostScript</option>
+              <option value="TSQL">TSQL</option>
+
+            </select>
+
+            <select name="fields" required="required" class="col-md-6 row d-flex justify-content-center mt-100" id="choices-multiple-remove-button" placeholder="Keywords (one or many)" multiple>
+                
+                <option value="Project">Project</option>
+                <option value="App">App</option>
+                <option value="Project">Project</option>
+                <option value="Dataset">Dataset</option>
+              
+                <option value="Project">Project</option>
+                <option value="Help">Help</option>
+                <option value="Website">Website</option>
+                <option value="Information">Information</option>
+                <option value="API">API</option>
+                <option value="PI">PI</option>
+                <option value="I">AI</option>
+                <option value="Bot">Bot</option>
+                <option value="Tracking">Tracking</option>
+                <option value="Application">Application</option>
+                <option value="Spread">Spread</option>
+                <option value="Web">Web</option>
+                <option value="Dashboard">Dashboard</option>
+                <option value="People">People</option>
+                <option value="Analysis">Analysis</option>
+                <option value="Country">Country</option>
+                <option value="Tracker">Tracker</option>
+                <option value="Source">Source</option>
+                <option value="Open">Open</option>
+                <option value="Time">Time</option>
+                <option value="Track">Track</option>
+                <option value="Tool">Tool</option>
+                <option value="Map">Map</option>
+                <option value="Statistic">Statistic</option>
+                <option value="Code">Code</option>
+                <option value="Simple">Simple</option>
+                <option value="Visualization">Visualization</option>
+                <option value="Hackathon">Hackathon</option>
+                <option value="Community">Community</option>
+                <option value="Related">Related</option>
+                <option value="World">World</option>
+                <option value="Update">Update</option>
+                <option value="Stats">Stats</option>
+                <option value="Resource">Resource</option>
+                <option value="Local">Local</option>
+                <option value="Health">Health</option>
+                <option value="Research">Research</option>
+                <option value="Based">Based</option>
+                <option value="Model">Model</option>
+                <option value="Contact">Contact</option>
+                <option value="Backend">Backend</option>
+                <option value="Crisis">Crisis</option>
+                <option value="Support">Support</option>
+                <option value="Public">Public</option>
+                <option value="Script">Script</option>
+                <option value="Global">Global</option>
+                <option value="Android">Android</option>
+                <option value="Infection">Infection</option>
+                <option value="Platform">Platform</option>
+                <option value="Report">Report</option>
+                <option value="Number">Number</option>
+                <option value="Hospital">Hospital</option>
+                <option value="Fight">Fight</option>
+                <option value="Patient">Patient</option>
+                <option value="India">India</option>
+                <option value="Display">Display</option>
+                <option value="Live">Live</option>
+                <option value="Response">Response</option>
+                <option value="Tracing">Tracing</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Current">Current</option>
+                <option value="Daily">Daily</option>
+                <option value="Location">Location</option>
+                <option value="Mobile">Mobile</option>
+                <option value="Site">Site</option>
+                <option value="State">State</option>
+                <option value="Make">Make</option>
+                <option value="Medical">Medical</option>
+                <option value="Data">Data</option>
+                <option value="App">App</option>
+                
+
+            </select>
+          </div>
+        </center>
+            <input type="hidden" name="hidden_skills" id="hidden_skills" />
+            <input type="submit" id="submission_button" value="Submit"/>
+        </form>
+
+
+
+
+        <p style="color: #919191; padding: 1em;">Use this tool to find right open source projuct of you on <b>Github!!</b> &#129321<br>
+         
+
+          Select one or many of your preferred progect language and keywords(project description) from the above drop downs. Then click on submit.&#9989;<br>
+           <em><b>The more you select, the more accurate your recommendation will be.</b></em>
+          <br>
+        <br>
+        <p>Handcraft✍ by <a href="https://jyothiprakashpanaik.github.io/porfolio/"  target="_blank">jyothiprakash</a></p>
+  </div>
+
+
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js'></script>
+<script>
+// Menu
+
+
+
+
+
+
+    $(document).ready(function(){
+
+ var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+ removeItemButton: true,
+ maxItemCount:10,
+ // searchResultLimit:5,
+ // renderChoiceLimit:5
+ });
+
+
+ });
+
+    $(document).ready(function(){
+
+ var multipleCancelButton = new Choices('#lang', {
+ removeItemButton: true,
+ maxItemCount:10,
+
+
+ });
+
+
+ });
+
+
+
+
+
+    
+</script>
+
+</body>
+</html>
+
+
+

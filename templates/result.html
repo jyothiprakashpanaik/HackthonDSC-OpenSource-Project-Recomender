@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Open Source Recomender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:300,500&amp;display=swap'>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/open-source--v1.png" type="image/x-icon">  
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+    background-color: #ffffff;
+  line-height: 1.5;
+  color: #000;
+  background-color: #F1FDFF;
+}
+@media (min-width: 32rem) {
+  body {
+    font-size: 102.5%;
+  }
+}
+@media (min-width: 54rem) {
+  body {
+    font-size: 105%;
+  }
+}
+@media (min-width: 65rem) {
+  body {
+    font-size: 107.5%;
+  }
+}
+@media (min-width: 75em) {
+  body {
+    font-size: 110%;
+  }
+}
+@media (min-width: 91rem) {
+  body {
+    font-size: 115%;
+  }
+}
+@media (min-width: 115rem) {
+  body {
+    font-size: 120%;
+  }
+}
+@media (min-width: 130rem) {
+  body {
+    font-size: 125%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+figure {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+    .movie{
+        /*height: 70vh;*/
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+        margin-right: 5vh;
+        margin-left: 5vh;
+        display: block;
+        background-color: white;
+        border-radius: 20px;
+        padding: 1em;
+        width: auto;
+        box-shadow: 0px -10px 20px -5px #E2E2E2;
+        text-align: center;
+    }
+
+    @media screen and (max-width:600px) {
+        .movie{
+            margin-top: 12vh;
+            margin-bottom: 12vh;
+        }
+}
+    table,tr,td,th{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    td{
+      padding: 10px;  
+    }
+
+.nowrap {
+  white-space: nowrap ;
+}
+</style>
+</head>
+<body>
+    <div class="movie">
+        <h2>&#11088;<u>Predict Result</u></h2>
+
+       <p style=" margin-top: 2.5%; margin-bottom: 1rem;"><i style="font-size:24px" class="fa">&#xf09b;</i> Most Relevant GitHub Repositories:</p>
+		
+<center><hr style="width: 30%;"></center>
+
+
+
+
+<div class="container" style="width: 50%;">
+	
+<center style ="background-color: #f5f7fa; padding: 15px;">
+
+
+<ul style="list-style-type:none;padding:0     list-style-type: none;
+    padding: 0;
+    padding: 0;
+    width: 60%;">
+  	<!-- owner_repo_name,
+		github_repo_url,
+		repo_description,
+		count_of_stars,
+		primary_language_name,
+		license_name,
+		repo_created_day -->
+
+		{% for name, url, desc, star, lang, lic, day in context %}
+			  <li style="">
+			  <svg height="16" style="fill: gray;margin-right: 5px" class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
+			  <a href="{{url}}" target="_blank">{{name}}</a>
+			  <p class="mb-0">{{desc}}</p>
+
+
+				<span class="nowrap">
+			  <p class="small text-muted">
+			  <svg aria-label="star" class="octicon octicon-star" style="fill:gray; vertical-align: top;padding-top:3px" viewBox="0 0 14 16" version="1.1" width="14" height="16" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
+			  {{star}}
+			  &nbsp;&nbsp;
+			  {{lang}}
+			  &nbsp;&nbsp;
+
+			  {{lic}} license    
+              &nbsp;&nbsp;
+			  
+			  Created {{day}}
+			  </p>
+				</span>
+			  </li>
+ 	
+  		{% endfor %}
+  
+</ul>
+</center>
+</div>
+
+        <br>
+        <br>
+        Handcraft✍ by <a href="https://jyothiprakashpanaik.github.io/porfolio/"  target="_blank">jyothiprakash</a>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  </div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js'></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+
+</body>
+</html>
