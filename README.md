@@ -94,8 +94,10 @@ Our next step would be to follow the instruction given on [Heroku Documentation]
 [<img target="_blank" src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" width=200>](https://scikit-learn.org/stable/)
 [<img target="_blank" src="https://flask.palletsprojects.com/en/1.1.x/_images/flask-logo.png" width=170>](https://flask.palletsprojects.com/en/1.1.x/) 
  
-
-
+* NLTK - module to filter the the dataset and building model
+* Sklearn - for making the predictions based on cosine similarity
+* Flask - to run this web-application 
+* and some EDA and EDD steps to clean the model.
 ## Bug / Feature Request
 
 If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an [issue](https://github.com/jyothiprakashpanaik/HackthonDSC-OpenSource-Project-Recomender.git) here by including your search query and the expected result
@@ -103,5 +105,6 @@ If you find a bug (the website couldn't handle the query and / or gave undesired
 ## Future Scope
 
 * Use multiple Algorithms
+* Add some more features
 * Optimize Flask app.py
 * Front-End 
