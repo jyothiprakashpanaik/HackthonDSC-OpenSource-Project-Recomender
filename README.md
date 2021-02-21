@@ -1,5 +1,5 @@
  <a href="https://mail.google.com/mail/u/1/?ui=2&view=btop&ver=1lcrjrtwrk9al#attid%253Datt_177a3edd46ee6287_0.1_f_kl61yrtu0">DSC Hackslash/ </a>-> <a href="https://drive.google.com/file/d/13SfqhtkHIClE_KlqwIF7jZ8q-NDz9Yoi/view">"#EduTech"</a> 
-<h1 style="color:black"> <a href="https://right-opensource-project.herokuapp.com/"><em>NLP-OpenSource-Project-Recomender </em></a> </h1>
+# <em>NLP-OpenSource-Project-Recomender</em>
 
 <!-- PROJECT LOGO -->
 <br />
